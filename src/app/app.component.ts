@@ -19,7 +19,7 @@ interface Spark {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, HomeComponent],
+  imports: [RouterModule, HomeComponent,],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

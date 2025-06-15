@@ -5,6 +5,7 @@
   gap: 20px;
 }
 
+/* Make sidebar sticky */
 .sidebar {
   width: 250px;
   height: fit-content;
@@ -15,12 +16,12 @@
   align-items: center;
   border-radius: 30px;
   border: 1px solid #383838;
-  position: sticky;
   margin: 20px;
-  
+
+  position: sticky;
+  top: 20px;  /* distance from the top of viewport */
+  align-self: flex-start; /* so that it doesn't stretch */
 }
-
-
 
 .role {
   background-color: #1E1E1F;
@@ -47,14 +48,21 @@
   color: gold;
 }
 
+.mainnnn {
+  background-color: #181818;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 20px;
+  position: relative;
+  top: 1;  
+}
+
 .main-content {
   flex: 1;
   padding: 40px;
-  background-color: #181818;
   border-radius: 30px;
+  overflow: hidden;
   height: 200vh;
-    margin: 20px;
-    
 }
 
 .navbar {
@@ -126,24 +134,27 @@
   color: #aaa;
   font-size: 14px;
 }
-img{
-    width: 170px;
-    border-radius: 20px;
 
+img {
+  border-radius: 20px;
 }
 
-.avatar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #323233;
-    width: 250px;
-    height: 230px;
-    border-radius: 20px;
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323233;
+  width: 170px;
+  height: 160px;
+  border-radius: 20px;
 }
 
-.hr{
-    height: 2px;
-    width: 250px;
-    background: #2E2E2E;
+.hr {
+  height: 2px;
+  width: 250px;
+  background: #2E2E2E;
+}
+.nav{
+  display: flex;
+  justify-content: end;
 }
