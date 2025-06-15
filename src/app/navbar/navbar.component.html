@@ -1,15 +1,8 @@
 <nav>
-    <div class="img">
-    <a routerLink="/"><img src="https://i.ibb.co/VX95vRZ/dasdad.png" alt="dasdad"></a> 
-    <h1>Tsotne Ivanashvili</h1>
-    </div>
-
-    <div class="section">
-        <ul>
-            <li>HOME</li>
-            <li>ABOUT</li>
-            <li>PROJECTS</li>
-            <li>CONTACT</li>
-        </ul>
-    </div>
+    <ul>
+        <li routerLink="/" routerLinkActive="one" [routerLinkActiveOptions]="{ exact: true }">About</li>
+        <li routerLink="/resume" routerLinkActive="one">Resume</li>
+        <li routerLink="/portfolio" routerLinkActive="one">Portfolio</li>
+        <li routerLink="/contact" routerLinkActive="one">Contact</li>
+    </ul>
 </nav>

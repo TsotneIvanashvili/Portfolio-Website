@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  height: auto;
+  color: #FAFAFA;
+  gap: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  height: fit-content;
+  background-color: #1c1c1c;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid #383838;
+  position: sticky;
+  margin: 20px;
+  
+}
+
+
+
+.role {
+  background-color: #1E1E1F;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+.info {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: gold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #181818;
+  border-radius: 30px;
+  height: 200vh;
+    margin: 20px;
+    
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.navbar span {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.navbar .active {
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar .active::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: gold;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+.about h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.what-i-do {
+  margin-top: 40px;
+}
+
+.what-i-do h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000044;
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 14px;
+}
+img{
+    width: 170px;
+    border-radius: 20px;
+
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #323233;
+    width: 250px;
+    height: 230px;
+    border-radius: 20px;
+}
+
+.hr{
+    height: 2px;
+    width: 250px;
+    background: #2E2E2E;
+}

@@ -1,2 +1,60 @@
-<app-navbar></app-navbar>
-<app-banner></app-banner>
+<div class="container">
+  <aside class="sidebar">
+    <div class="avatar">
+            <a routerLink="/"><img src="https://i.ibb.co/VX95vRZ/dasdad.png" alt="dasdad"></a> 
+
+    </div>
+    <h2>Tsotne Ivanashvili</h2>
+    <div class="role">Web developer</div>
+    <div class="hr"></div>
+    <div class="info">
+      <div class="item">
+        <span class="icon"><i class="fa-solid fa-envelope fa-lg" style="color: #FFDB70;"></i></span>
+        <span>{{email}}</span>
+      </div>
+      <div class="item">
+        <span class="icon"><i class="fa-solid fa-phone fa-lg" style="color: #FFDB70;"></i></span>
+        <span>+995 599 13 33 79</span>
+      </div>
+      <div class="item">
+        <span class="icon"><i class="fa-solid fa-cake-candles fa-lg" style="color: #FFDB70;"></i></span>
+        <span>October 17, 2008</span>
+      </div>
+      <div class="item">
+        <span class="icon"><i class="fa-solid fa-location-dot fa-lg" style="color: #FFDB70;"></i></span>
+        <span>Tbilisi, Georgia</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <app-navbar></app-navbar>
+    <section class="about">
+      <h1>About Me</h1>
+      <p>I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media...</p>
+      <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive...</p>
+    </section>
+
+    <section class="what-i-do">
+      <h2>What I'm Doing</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Web Design</h3>
+          <p>The most modern and high-quality design made at a professional level.</p>
+        </div>
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>High-quality development of sites at the professional level.</p>
+        </div>
+        <div class="card">
+          <h3>Mobile Apps</h3>
+          <p>Professional development of applications for iOS and Android.</p>
+        </div>
+        <div class="card">
+          <h3>Photography</h3>
+          <p>I make high-quality photos of any category at a professional level.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

@@ -1,34 +1,22 @@
 nav{
-    background-color: white;
+    background-color: #282829;
     display: flex;
-    justify-content: space-around;
-    background-color: #f7f7f7;
     align-items: center;
-    height: 80px;
-    position: fixed;
-    z-index: 99999;
-    width: 100%;
-    max-width: 100%;
+    justify-content: center;
 }
 
 ul{
     list-style-type: none;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    
+    gap: 30px;
+    font-weight: 600;
 }
-.img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 
-}
-img{
-    width: 60px;
-    border-radius: 200px;
+.one{
+    color: #FFDB70;
+    transition: 0.3s;
 }
 
 li{
