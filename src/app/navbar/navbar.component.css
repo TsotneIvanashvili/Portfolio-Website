@@ -1,44 +1,71 @@
-span{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
-
+nav {
+  background-color: #282829;
+  width: fit-content;
+  display: flex;
+  justify-content: end;
+  padding: 10px 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom: 1px solid #4a4a4a;
+  border-left: 1px solid #4a4a4a;
+  height: 50px;
+  /* 3D effect */
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.4),
+    0 4px 6px rgba(0, 0, 0, 0.2);
+  transform: perspective(900px) translateZ(0);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-nav{
-    background-color: #282829;
-    width: fit-content;
-    display: flex;
-    justify-content: end;
-    padding: 10px 30px;
-    border-bottom-left-radius: 20px;
-    border-bottom: 1px solid #4a4a4a;
-    border-left: 1px solid #4a4a4a;
-
-
+nav:hover {
+  transform: perspective(900px) translateZ(0) scale(1.01);
+  box-shadow: 
+    0 12px 20px rgba(0, 0, 0, 0.5),
+    0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    gap: 40px;
-    font-weight: 600;
+span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
 
-.one{
-    color: #FFDB70;
-    transition: 0.3s;
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 40px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
 
+li {
+  color: #e3e3e3;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+li:hover {
+  color: #FFDB70;
+  transform: translateY(-2px) scale(1.05);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Active route link */
+.one {
+  color: #FFDB70;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+/* Underline hover effect */
 .underline-hover {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  transition: 0.3s;
-  padding-bottom: 3px; /* optional spacing between text and underline */
+  padding-bottom: 3px;
 }
 
 .underline-hover::after {
@@ -48,15 +75,10 @@ ul{
   bottom: 0;
   width: 0%;
   height: 2px;
-  background-color: #FFDB70; /* underline color */
+  background-color: #FFDB70;
   transition: width 0.3s ease-in-out;
 }
 
 .underline-hover:hover::after {
   width: 100%;
-}
-
-li:hover{
-      color: #FFDB70;
-    
 }

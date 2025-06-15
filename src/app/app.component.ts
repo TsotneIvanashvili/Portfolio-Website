@@ -7,7 +7,7 @@ import {
   OnDestroy,
   Input,
 } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 
 interface Spark {
@@ -19,7 +19,7 @@ interface Spark {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, HomeComponent,],
+  imports: [RouterModule, RouterOutlet,],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

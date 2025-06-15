@@ -1,0 +1,96 @@
+
+.sidebar {
+  width: 250px;
+  background-color: #1c1c1c;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid #383838;
+  margin: 20px;
+
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+
+  /* 3D Styling */
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.5),
+    0 5px 10px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateY(-3deg);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sidebar:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.02);
+  box-shadow: 
+    0 15px 25px rgba(0, 0, 0, 0.6),
+    0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.avatar img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+h2 {
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.role {
+  background-color: #1E1E1F;
+  color: #FFDB70;
+  padding: 5px 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.info {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 14px;
+  color: #ddd;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: gold;
+}
+
+.hr {
+  height: 2px;
+  width: 250px;
+  background: #2E2E2E;
+}
+
+
+.img {
+  border-radius: 20px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323233;
+  width: 170px;
+  height: 160px;
+  border-radius: 20px;
+}

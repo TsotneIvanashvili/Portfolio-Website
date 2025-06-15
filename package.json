@@ -18,8 +18,11 @@
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
     "gsap": "^3.13.0",
+    "ogl": "^1.0.11",
+    "particles.js": "^2.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "tsparticles": "^3.8.1",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {

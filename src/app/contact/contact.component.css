@@ -1,0 +1,161 @@
+.container {
+  display: flex;
+  height: auto;
+  color: #FAFAFA;
+  gap: 20px;
+
+}
+
+
+.mainnnn {
+  background-color: #181818;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 20px;
+  position: relative;
+    transition: 0.3s;
+
+}
+
+
+.main-content {
+  margin-top: -100px;
+  flex: 1;
+  padding: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 200vh;
+  border: 1px solid #383838;
+}
+
+
+.mainnnn:hover{
+  transform: scale(1.01);
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.navbar span {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.navbar .active {
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar .active::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: gold;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+.about h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.what-i-do {
+  margin-top: 40px;
+}
+
+.what-i-do h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3), 
+    0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(5deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: perspective(1000px) rotateX(0deg) scale(1.03);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4), 
+    0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card p {
+  color: #aaa;
+  font-size: 14px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.iconebi {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+
+.hr {
+  height: 2px;
+  width: 250px;
+  background: #2E2E2E;
+}
+.nav{
+  display: flex;
+  justify-content: end;
+}
+
+
+.iconebi{
+  width: 50px;
+}
+
+.adzin{
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hr1{
+  height: 9px;
+  border-radius: 10px;
+  width: 150px;
+  background: #FFDB70;
+}
+
+h1{
+  background-color: #282829;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}
