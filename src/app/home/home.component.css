@@ -29,34 +29,27 @@
   border: 1px solid #383838;
 }
 
-
-.navbar {
+.nav{
   display: flex;
-  gap: 30px;
-  font-size: 16px;
-  margin-bottom: 30px;
+  justify-content: end;
+  width: 100%;
+  
 }
 
-.navbar span {
-  cursor: pointer;
-  color: #ccc;
+@media only screen and (max-width: 670px) {
+  .main-content{
+    padding-top: 100px;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  }
 }
 
-.navbar .active {
-  color: white;
-  font-weight: bold;
-  position: relative;
-}
 
-.navbar .active::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: gold;
-  margin-top: 4px;
-  border-radius: 2px;
-}
 
 .about h1 {
   font-size: 30px;
@@ -134,10 +127,10 @@
   width: 250px;
   background: #2E2E2E;
 }
-.nav{
-  display: flex;
-  justify-content: end;
-}
+
+
+
+
 
 
 .iconebi{

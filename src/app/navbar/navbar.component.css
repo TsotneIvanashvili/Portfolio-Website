@@ -2,8 +2,8 @@ nav {
   background-color: #282829;
   width: fit-content;
   display: flex;
+  padding: 10px;
   justify-content: end;
-  padding: 10px 30px;
   border-bottom-left-radius: 20px;
   border-bottom: 1px solid #4a4a4a;
   border-left: 1px solid #4a4a4a;
@@ -81,4 +81,16 @@ li:hover {
 
 .underline-hover:hover::after {
   width: 100%;
+}
+
+
+@media only screen and (max-width: 670px ) {
+ 
+  nav{
+    width: fit-content;
+    border-radius: 0;
+    padding: 9px 200px;
+    position: sticky;
+  }
+
 }

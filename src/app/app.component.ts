@@ -6,9 +6,10 @@ import {
   HostListener,
   OnDestroy,
   Input,
+  OnInit
 } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
+import { LoadingComponent } from "./loading/loading.component";
 
 interface Spark {
   x: number;
@@ -19,14 +20,17 @@ interface Spark {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, RouterOutlet,],
+  standalone: true,
+  imports: [RouterModule, RouterOutlet, LoadingComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit, OnDestroy {
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'TestProject';
 
-  // Inputs to mimic the React-style props
+  // 💡 Loader flag
+  appLoaded = false;
+
   @Input() sparkColor: string = '#fff';
   @Input() sparkSize: number = 10;
   @Input() sparkRadius: number = 15;
@@ -41,13 +45,17 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   private animationId: number = 0;
   private resizeObserver!: ResizeObserver;
 
+  // ✅ Show loading screen on init
+  ngOnInit() {
+    setTimeout(() => {
+      this.appLoaded = true;
+    }, 2000); // Simulated loading delay
+  }
+
   ngAfterViewInit() {
     this.resizeCanvas();
-
-    // Resize observer for dynamic canvas resizing
     this.resizeObserver = new ResizeObserver(() => this.resizeCanvas());
     this.resizeObserver.observe(this.canvasRef.nativeElement.parentElement!);
-
     this.animate();
   }
 
@@ -78,7 +86,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     canvas.height = height;
   }
 
-  private animate = (timestamp?: number) => {
+  private animate = () => {
     const canvas = this.canvasRef.nativeElement;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -86,7 +94,6 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     const now = performance.now();
-
     this.sparks = this.sparks.filter((spark: Spark) => {
       const elapsed = now - spark.startTime;
       if (elapsed >= this.duration) return false;
