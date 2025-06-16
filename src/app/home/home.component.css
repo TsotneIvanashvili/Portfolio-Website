@@ -1,4 +1,3 @@
-/* Main Layout Styles */
 .container {
   display: flex;
   height: fit-content;
@@ -6,7 +5,153 @@
   margin-top: 50px;
 }
 
-.sidebar {
+.sidebar{
+  position: sticky;
+}
+
+.mainnnn {
+  background-color: #181818;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+    transition: 0.3s;
+  flex: 1;
+}
+
+
+.main-content {
+  margin-top: -100px;
+  flex: 1;
+  padding: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid #383838;
+}
+
+.nav{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  
+}
+
+@media only screen and (max-width: 670px) {
+  .main-content{
+    padding-top: 100px;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  }
+}
+
+
+
+.about h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+/* Updated CSS for horizontal scrolling cards */
+.what-i-do {
+  margin-top: 40px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.what-i-do h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cardss {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  width: max-content; /* Allows cards to expand horizontally */
+  padding: 10px 0;
+}
+
+.card {
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* Slightly reduced for better scrolling */
+  min-width: 300px; /* Prevents cards from shrinking */
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3), 
+    0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(5deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  flex-shrink: 0; /* Prevents cards from shrinking */
+}
+
+.card:hover {
+  transform: perspective(1000px) rotateX(0deg) scale(1.03);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4), 
+    0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar styling */
+.cardss::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cardss::-webkit-scrollbar-track {
+  background: #2e2e2e;
+  border-radius: 10px;
+}
+
+.cardss::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #FFDB70, #ff9d00);
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 280px;
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 260px;
+    min-width: 260px;
+    padding: 15px;
+  }
+  
+  .what-i-do h2 {
+    font-size: 20px;
+  }
+}
+
+/* Keep all your existing styles below */
+.container {
+  display: flex;
+  height: fit-content;
+  color: #FAFAFA;
+  margin-top: 50px;
+}
+
+.sidebar{
   position: sticky;
 }
 
@@ -29,13 +174,25 @@
   border: 1px solid #383838;
 }
 
-.nav {
+.nav{
   display: flex;
   justify-content: end;
   width: 100%;
 }
 
-/* About Section */
+@media only screen and (max-width: 670px) {
+  .main-content{
+    padding-top: 100px;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  }
+}
+
 .about h1 {
   font-size: 30px;
   margin-bottom: 20px;
@@ -44,54 +201,6 @@
 .about p {
   margin-bottom: 15px;
   color: #ccc;
-}
-
-/* What I Do Section - Horizontal Scrolling Cards */
-.what-i-do {
-  margin-top: 40px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.what-i-do h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.cardss {
-  width: 100%;
-  overflow-x: auto;
-  padding-bottom: 20px;
-  scroll-behavior: smooth;
-}
-
-.cards {
-  display: flex;
-  gap: 20px;
-  width: max-content;
-  padding: 10px 0;
-}
-
-.card {
-  background-color: #242424;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  min-width: 300px;
-  box-shadow: 
-    0 5px 15px rgba(0, 0, 0, 0.3), 
-    0 10px 30px rgba(0, 0, 0, 0.2);
-  transform: perspective(1000px) rotateX(5deg);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform-style: preserve-3d;
-  flex-shrink: 0;
-}
-
-.card:hover {
-  transform: perspective(1000px) rotateX(0deg) scale(1.03);
-  box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.4), 
-    0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
@@ -106,64 +215,6 @@
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* Colleges Section */
-.colleges-section {
-  padding: 3rem 1.5rem;
-  background-color: #1a1a1a;
-  color: #fafafa;
-  border-radius: 16px;
-  margin: 2rem 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.section-header {
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #FFDB70, #ff9d00);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  border-radius: 8px;
-}
-
-.section-divider {
-  height: 4px;
-  width: 100px;
-  background: linear-gradient(90deg, #FFDB70, #ff9d00);
-  margin: 0 auto;
-  border-radius: 4px;
-}
-
-.college-cards-container {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
-}
-
-.college-card {
-  min-width: 300px;
-  max-width: 350px;
-  background: #242424;
-  border-radius: 12px;
-  padding: 1.5rem;
-  scroll-snap-align: start;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #383838;
-  flex: 1;
-}
-
-/* Shared Elements */
 .iconebi {
   width: 60px;
   height: auto;
@@ -171,94 +222,66 @@
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
 }
 
-.hr1 {
+.hr {
+  height: 2px;
+  width: 250px;
+  background: #2E2E2E;
+}
+
+.iconebi{
+  width: 50px;
+}
+
+.adzin{
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hr1{
   height: 9px;
   border-radius: 10px;
   width: 150px;
   background: #FFDB70;
 }
 
-/* Scrollbars */
-.cardss::-webkit-scrollbar,
-.college-cards-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.cardss::-webkit-scrollbar-track,
-.college-cards-container::-webkit-scrollbar-track {
-  background: #2e2e2e;
+h1{
+  background-color: #282829;
+  width: fit-content;
+  padding: 10px;
   border-radius: 10px;
 }
 
-.cardss::-webkit-scrollbar-thumb,
-.college-cards-container::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #FFDB70, #ff9d00);
-  border-radius: 10px;
+/* ... (keep all your other existing styles below) ... */
+
+.college{
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
 }
 
-/* Responsive Design */
+.college {
+  display: flex;
+  gap: 20px; /* space between cards */
+  overflow-x: auto; /* enables side scroll */
+  padding-bottom: 10px; /* optional: space under cards */
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+.cardsss {
+  background-color: #242424;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 0 0 auto; /* prevent card from shrinking */
+}
+
+
 @media only screen and (max-width: 1030px) {
-  .container {
+  .container{
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 670px) {
-  .main-content {
-    padding-top: 100px;
-  }
-
-  .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 280px;
-    min-width: 280px;
-  }
-  
-  .section-title {
-    font-size: 1.7rem;
-  }
-  
-  .college-card {
-    min-width: 280px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    width: 260px;
-    min-width: 260px;
-    padding: 15px;
-  }
-  
-  .what-i-do h2 {
-    font-size: 20px;
-  }
-  
-  .colleges-section {
-    padding: 2rem 1rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  .college-logo {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .college-info h3 {
-    font-size: 1.2rem;
   }
 }
 
@@ -425,6 +448,10 @@
   
   .college-card {
     min-width: 280px;
+  }
+
+  .about{
+    margin-top: 10px;
   }
 }
 

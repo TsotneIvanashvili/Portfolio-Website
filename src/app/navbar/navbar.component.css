@@ -14,6 +14,8 @@ nav {
     0 4px 6px rgba(0, 0, 0, 0.2);
   transform: perspective(900px) translateZ(0);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+      max-width: 100%;
+
 }
 
 nav:hover {
@@ -39,9 +41,13 @@ ul {
   font-weight: 600;
   margin: 0;
   padding: 0;
+      max-width: 100%;
+
 }
 
 li {
+      max-width: 100%;
+
   color: #e3e3e3;
   position: relative;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -91,6 +97,19 @@ li:hover {
     border-radius: 0;
     padding: 9px 200px;
     position: sticky;
+    max-width: 100%;
   }
 
+}
+
+
+@media only screen and (max-width: 420px) {
+ 
+  .underline-hover{
+    font-size: 13px;
+  }
+
+  ul{
+    gap: 10px;
+  }
 }
