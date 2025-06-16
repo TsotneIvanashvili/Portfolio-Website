@@ -1,22 +1,38 @@
-.loading-screen {
-  display: grid;
-  place-content: center;
+/* Reset and full width setup */
+:host {
+  display: block;
   height: 100dvh;
-  width: 100vw;
-  background-color: #181818;
+  width: 100dvw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #181818; /* optional background */
+  font-family: 'Courier New', monospace;
 }
 
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 8px solid #2f2e2e;
-  border-top: 8px solid #b09250;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+/* Perfect centering */
+.decrypted-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+/* Decrypted text styling */
+.decrypted-text {
+  color: #E3E3E3;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+  font-size: clamp(1.2rem, 6vw, 3rem); /* responsive */
+  padding: 0.5rem 1.5rem;
+  max-width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
