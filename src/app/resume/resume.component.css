@@ -3,6 +3,9 @@
   height: auto;
   color: #FAFAFA;
   gap: 20px;
+      flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -14,6 +17,7 @@
   margin: 20px;
   position: relative;
     transition: 0.3s;
+
 
 }
 
