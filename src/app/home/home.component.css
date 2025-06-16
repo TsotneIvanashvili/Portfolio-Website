@@ -123,20 +123,24 @@
   border-radius: 10px;
 }
 
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .card {
-    width: 280px;
-    min-width: 280px;
+    width: fit-content;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
+
 }
 
 @media (max-width: 480px) {
-  .card {
-    width: 260px;
-    min-width: 260px;
-    padding: 15px;
-  }
+
+
   
   .what-i-do h2 {
     font-size: 20px;
@@ -296,4 +300,102 @@ h1{
 .adzin{
   border-radius: 10px;
   width: 70px;
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+
+
+.scroll-btn {
+  background: #2E2E2E;
+  color: #FFDB70;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.scroll-btn:hover {
+  background: #3a3a3a;
+}
+
+
+.horizontal-scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-btn {
+  background: none;
+  border: none;
+  color: #FFDB70;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.scroll-btn:hover {
+  color: #ffffff;
+}
+
+.cardss {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  width: max-content;
+}
+
+
+
+.card1{
+
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* Slightly reduced for better scrolling */
+  min-width: 300px; /* Prevents cards from shrinking */
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.3), 
+    0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(5deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  flex-direction: column;
+}
+
+.card1:hover {
+  transform: perspective(1000px) rotateX(0deg) scale(1.03);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4), 
+    0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 768px) {
+      .card1 {
+    width: 150px;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
 }

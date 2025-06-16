@@ -178,3 +178,8 @@ h2 {
     max-height: 300px; /* Adjust this value to accommodate all items */
   }
 }
+
+.aqine{
+  display: flex;
+  flex-direction: column;
+}
