@@ -1,7 +1,9 @@
-
+<!-- 
 <div style="position: relative; width: 100%; height: 100%;">
 @if (!appLoaded) {
-  <app-loading></app-loading>  <!-- your loading component -->
+    <canvas #sparkCanvas style="position: absolute; inset: 0; pointer-events: none;"></canvas>
+
+  <app-loading></app-loading>  your loading component
 } @else {
   <canvas #sparkCanvas style="position: absolute; inset: 0; pointer-events: none;"></canvas>
   <router-outlet></router-outlet>
@@ -10,10 +12,11 @@
     #sparkCanvas
     style="position: absolute; inset: 0; pointer-events: none;"
   ></canvas>
-  <!-- Content goes here (like React children) -->
   <div style="position: relative; z-index: 1;">
 
-    <!-- Projected content will go here -->
     <ng-content></ng-content>
   </div>
-</div>
+</div> -->
+
+
+<router-outlet></router-outlet>

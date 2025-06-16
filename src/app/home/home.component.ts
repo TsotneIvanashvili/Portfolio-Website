@@ -5,7 +5,7 @@ import { SidebarComponent } from "../sidebar/sidebar.component";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule, NavbarComponent, SidebarComponent,  ],
+  imports: [RouterModule, NavbarComponent, SidebarComponent,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
