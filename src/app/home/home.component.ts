@@ -27,11 +27,11 @@ export class HomeComponent {
  @ViewChild('cardContainer', { static: true }) cardContainer!: ElementRef<HTMLDivElement>;
 
   scrollLeft() {
-    this.cardContainer.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
+    this.cardContainer.nativeElement.scrollBy({ left: -350, behavior: 'smooth' });
   }
 
   scrollRight() {
-    this.cardContainer.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
+    this.cardContainer.nativeElement.scrollBy({ left: 350, behavior: 'smooth' });
   }
 
 

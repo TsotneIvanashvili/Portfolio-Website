@@ -2,7 +2,7 @@ nav {
   background-color: #282829;
   width: fit-content;
   display: flex;
-  padding: 10px;
+  padding: 5px 100px;
   justify-content: end;
   border-bottom-left-radius: 20px;
   border-bottom: 1px solid #4a4a4a;
@@ -90,7 +90,7 @@ li:hover {
 }
 
 
-@media only screen and (max-width: 670px ) {
+@media only screen and (max-width: 800px ) {
  
   nav{
     width: fit-content;
