@@ -1,35 +1,33 @@
-/* Reset and full width setup */
 :host {
   display: block;
   height: 100dvh;
   width: 100dvw;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
-  background-color: #181818; /* optional background */
+  background-color: #181818;
   font-family: 'Courier New', monospace;
+  padding: 2rem; /* ensures padding from all borders */
+  box-sizing: border-box;
 }
 
-/* Perfect centering */
-.decrypted-wrapper {
-  display: flex;
+.main{
+      display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100%;
-  padding: 1rem;
-  text-align: center;
 }
 
-/* Decrypted text styling */
-.decrypted-text {
-  color: #E3E3E3;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: fadeIn 1s ease-in-out;
-  font-size: clamp(1.2rem, 6vw, 3rem); /* responsive */
-  padding: 0.5rem 1.5rem;
-  max-width: 100%;
+.text-group{
+  color: #a8a8a8;
+  text-align: center;
+
+}
+
+.decrypted-wrapper{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @keyframes fadeIn {

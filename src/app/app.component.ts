@@ -49,7 +49,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     setTimeout(() => {
       this.appLoaded = true;
-    }, 2000); // Simulated loading delay
+    }, 2700); // Simulated loading delay
   }
 
   ngAfterViewInit() {

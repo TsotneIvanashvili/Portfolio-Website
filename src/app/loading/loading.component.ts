@@ -6,30 +6,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loading.component.css']
 })
 export class LoadingComponent implements OnInit {
-  originalText = 'Loading...';
+  originalText = 'Loading your experience...';
+  subOriginalText = 'Please wait...';
   displayText = '';
+  subDisplayText = '';
   scrambleChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.startDecryption();
   }
 
-  startDecryption() {
+  startDecryption(): void {
     let progress = 0;
+    const maxLength = Math.max(this.originalText.length, this.subOriginalText.length);
+
     const interval = setInterval(() => {
-      this.displayText = this.originalText
-        .split('')
-        .map((char, i) => {
-          if (i < progress) return char;
-          if (char === ' ') return ' ';
-          return this.scrambleChars[Math.floor(Math.random() * this.scrambleChars.length)];
-        })
-        .join('');
+      this.displayText = this.scrambleText(this.originalText, progress);
+      this.subDisplayText = this.scrambleText(this.subOriginalText, progress);
+
       progress++;
 
-      if (progress > this.originalText.length) {
+      if (progress > maxLength) {
         clearInterval(interval);
       }
     }, 50);
+  }
+
+  scrambleText(text: string, progress: number): string {
+    return text.split('').map((char, i) => {
+      if (i < progress) return char;
+      if (char === ' ') return ' ';
+      return this.scrambleChars[Math.floor(Math.random() * this.scrambleChars.length)];
+    }).join('');
   }
 }
