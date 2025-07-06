@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loading.component.css']
 })
 export class LoadingComponent implements OnInit {
-  originalText = 'Welcome...';
+  originalText = 'Loading...';
   subOriginalText = 'Please wait...';
   displayText = '';
   subDisplayText = '';
